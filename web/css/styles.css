@@ -1,0 +1,239 @@
+body,
+html {
+    margin: 0;
+}
+
+body {
+    overflow-x: hidden;
+    height: 100%;
+}
+
+.main {
+    position: relative;
+    height: 100%;
+}
+
+.nav__list {
+    list-style: none;
+}
+
+.nav__list-item {
+    float: left;
+    padding: 0px 20px;
+}
+
+.nav__link {
+    text-decoration: none;
+    color: #0a5b8a;
+}
+
+.nav__link:hover {
+    border-bottom: 2px solid #0a5b8a;
+}
+
+.nav {
+    top: 0px;
+    height: 50px;
+    width: 100vw;
+    background-color: #fff;
+    margin-bottom: 20px;
+    position: fixed;
+    z-index: 10;
+    text-align: center;
+    box-shadow: 0px 0px 2px 2px rgba(7, 5, 27, 0.25);
+}
+
+
+
+/* HERO */
+.hero {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+
+/* HEADER & SECTION DEFS */
+.header {
+    font-family: 'Montserrat';
+    font-size: 48px;
+    color: #fff;
+    text-shadow: 2px 2px 1px #005994;
+}
+
+.section {
+    position: absolute;
+    background-color: #fff;
+    padding: 15px 10px;
+    height: 35vw;
+    width: 80vw;
+    left: 5vw;
+    /* box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.3); */
+    /* box-shadow: 0px 0px 0px 4px rgb(0, 89, 148); */
+    border-radius: 15px;
+}
+
+.anchor {
+    position: absolute;
+    height: 150px;
+    left: 6vw;
+    padding-top: 100px;
+}
+
+.footer {
+    position: relative;
+    bottom: -26px;
+    width: 100%;
+    height: 20px;
+    font-family: 'Montserrat';
+    background-color: #005994;
+    color: white;
+    font-size: 12px;
+    padding-top: 5px;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-align: center;
+}
+
+
+
+
+
+/* MEDIA QUERIES */
+
+
+/* Breakpoint for mobile */
+@media screen and (max-width: 900px) {
+
+    .section {
+        width: 100vw;
+        left: 0px;
+        height: 120vw;
+        border-radius: 0px;
+    }
+
+    .anchor {
+        left: 0vw;
+    }
+
+    .header {
+        width: 100vw;
+        text-align: center;
+        left: 0px;
+        font-size: 42px;
+    }
+
+    .nav__container {
+        width: 70vw;
+    }
+
+    .nav {
+        display: none;
+        width: 70vw;
+        height: 100vh;
+        position: fixed;
+        left: 30vw;
+        text-align: center;
+        z-index: 8;
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav__list {
+        text-align: center;
+        padding-left: 0;
+    }
+
+    .nav__list-item {
+        float: left;
+        display: block;
+        padding-top: 80px;
+        padding: 40px 0px;
+        text-align: center;
+        width: 100%;
+    }
+
+    .nav__mobile-checkbox {
+        display: none;
+    }
+
+    .nav__mobile-bar {
+        position: fixed;
+        height: 60px;
+        width: 100vw;
+        background-color: #005994;
+        z-index: 9;
+    }
+
+    .nav__mobile-menu-button {
+        float: right;
+        width: 50px;
+        height: 50px;
+        margin-right: 5px;
+        margin-top: 4px;
+        z-index: 10;
+        user-select: none;
+        font-size: 45px;
+        color: white;
+    }
+
+    .burger-container {
+        width: 40px;
+        height: 40px;
+        margin-top: 8px;
+        margin-right: 10px;
+    }
+
+    .burger-1 {
+        width: 40px;
+        height: 5px;
+        background-color: white;
+        transition: 0.3s;
+    }
+
+    .burger-2 {
+        margin-top: 10px;
+        width: 40px;
+        height: 5px;
+        background-color: white;
+        transition: 0.3s;
+    }
+
+    .burger-3 {
+        margin-top: 10px;
+        bottom: 0px;
+        width: 40px;
+        height: 5px;
+        background-color: white;
+        transition: 0.3s;
+    }
+
+    .close .burger-1 {
+        transform: rotate(45deg) translate(11px, 11px);
+    }
+
+    .close .burger-2 {
+        opacity: 0;
+    }
+
+    .close .burger-3 {
+        transform: rotate(-45deg) translate(10px, -10px);
+    }
+
+    .nav__mobile-checkbox:checked~.nav {
+        display: block;
+        top: 60px;
+    }
+
+    .nav__mobile-checkbox:checked~.nav__mobile-menu-button--burger {
+        display: none;
+    }
+
+    /* 
+    .nav__mobile-checkbox:checked~.nav__mobile-menu-button--close {
+        display: block;
+    } */
+}
+
+/* tablet */
+@media screen and (max-width: 768px) {}
